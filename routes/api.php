@@ -33,3 +33,7 @@
 		Persona::create($persona);
 		return Response::json($persona);
 	});
+	Route::post("/limpiar", function (Request $request) {
+		persona::truncate();
+		return Response::json(["status" => true,"data"=>"jajajajaaj"]);
+	});
