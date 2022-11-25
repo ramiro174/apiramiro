@@ -1,5 +1,6 @@
 <?php
 	
+	use App\Models\Persona;
 	use Illuminate\Http\Request;
 	use Illuminate\Support\Facades\Route;
 	
@@ -36,4 +37,9 @@
 		];
 		$respuesta["data"] = $array;
 		return Response::json($respuesta);
+	});
+	Route::post("/enviarnumero", function (Request $request) {
+		$persona = $request->input("persona");
+		Persona::create($persona);
+		return Response::json($persona);
 	});
