@@ -45,6 +45,13 @@
 	
 	
 	Route::get('/contactos', function (Request $request) {
-		$respuesta["data"] =[["nombre" => "Juan", "numero" => "871-176-50-65","url"=>"https://www.google.com"], ["nombre" => "Pedro", "numero" => "871-176-50-64","url"=>"https://www.google.com"], ["nombre" => "Maria", "numero" => "871-176-50-62","url"=>"https://www.google.com"]];
+		$respuesta["data"] =[
+			["nombre" => "Juan", "numero" => "871-176-50-65","url"=>"https://www.google.com"],
+			["nombre" => "Pedro", "numero" => "871-176-50-64","url"=>"https://www.youtube.com"],
+			["nombre" => "Maria", "numero" => "871-176-50-62","url"=>"https://www.amazon.com"],
+			["nombre" => "Ramiro", "numero" => "871-176-50-62","url"=>"https://bitcoin.org/es/"],
+			["nombre" => "Carlos", "numero" => "871-176-50-62","url"=>"https://bitso.com/"],
+		
+		];
 		return Response::json($respuesta);
 	});
