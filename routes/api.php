@@ -42,8 +42,6 @@
 		persona::truncate();
 		return Response::json(["status" => true, "data" => "jajajajaaj"]);
 	});
-	
-	
 	Route::get('/contactos', function (Request $request) {
 		$respuesta["data"] =[
 			["nombre" => "Juan", "numero" => "871-176-50-65","url"=>"https://www.google.com"],
