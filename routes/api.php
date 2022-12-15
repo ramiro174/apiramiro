@@ -31,7 +31,7 @@
 	Route::post("/enviarnumero", function (Request $request) {
 //		["nombre" => $nombre, "numero" => $numero] ;
 		$persona = $request->input("persona");
-		if ($persona["numero"] >= 22) {
+		if ($persona["numero"] >= 31) {
 			$respuesta = ["status" => false, "mensaje" => "El numero debe ser menor a 22"];
 			return Response::json($respuesta);
 		}
