@@ -18,7 +18,7 @@
 		return $request->user();
 	});
 	Route::get('/numero', function (Request $request) {
-		$r = rand(1, 10);
+		$r = rand(1, 54);
 		$array = ["Numero" => $r];
 		return Response::json($array);
 	});
@@ -31,7 +31,7 @@
 	Route::post("/enviarnumero", function (Request $request) {
 //		["nombre" => $nombre, "numero" => $numero] ;
 		$persona = $request->input("persona");
-		if ($persona["numero"] >= 31) {
+		if ($persona["numero"] >= 54) {
 			$respuesta = ["status" => false, "mensaje" => "El numero debe ser menor a 22"];
 			return Response::json($respuesta);
 		}
